@@ -1,0 +1,309 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw-.ttf) format('truetype');
+}
+@font-face {
+  font-family: Tesla;
+  src: url(../assets/fonts/TESLA.ttf) format("truetype");
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+.container {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+.nipple .front {
+  background: white;
+  opacity: 1 !important;
+}
+.nipple .back {
+  border: white 1.5px solid;
+  background-color: transparent !important;
+  opacity: 1 !important;
+}
+/*移动按钮的样式*/
+.joystick {
+  position: fixed;
+  left: 30px;
+  bottom: 60px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  background-size: 100% 100%;
+}
+.joystick .bar-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+}
+.joystick .bar-wrap .bar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-size: 100% 100%;
+}
+.joystick .bar-wrap .bar.active {
+  margin-top: -50px;
+}
+/*技能按键按钮样式*/
+.skills {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+}
+.skills .bar:active {
+  transform: translateY(1px);
+}
+.skills .attack {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 14px;
+  bottom: 80px;
+  background: url("../images/jump.png") center no-repeat;
+  background-size: 100% 100%;
+  border-radius: 50%;
+}
+.biaoqing {
+  position: fixed;
+  left: 80px;
+  bottom: 20px;
+  width: 24px;
+  height: 24px;
+}
+.camera {
+  position: fixed;
+  left: 40px;
+  bottom: 20px;
+  width: 24px;
+  height: 24px;
+}
+.cameraDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+}
+.cameraDiv .subCameraOne {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.88);
+  flex: 2;
+  width: 100%;
+  height: auto;
+}
+.cameraDiv .subCameraOne .closeBtn {
+  position: relative;
+  top: 30px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+}
+.cameraDiv .canvasDiv {
+  display: flex;
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  flex: 1;
+}
+.cameraDiv .subCameraTwo {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.88);
+}
+.cameraDiv .subCameraTwo .actionList {
+  display: flex;
+  margin-top: 15px;
+  width: 100%;
+}
+.cameraDiv .subCameraTwo .actionList .action-item {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.cameraDiv .subCameraTwo .actionList .action-item .grid-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.cameraDiv .subCameraTwo .actionList .item-last {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.cameraDiv .subCameraTwo .icondot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+}
+#bgShowPoto {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.9);
+}
+#showPoto {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  z-index: 31;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#showPoto #showImg {
+  position: absolute;
+  display: flex;
+  width: 310px;
+  height: 320px;
+  justify-content: center;
+  align-items: center;
+}
+#showPoto #showImg img {
+  width: 100%;
+  height: 100%;
+}
+#showPoto #showImg .screenshotImg {
+  position: absolute;
+  display: flex;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+}
+#showPoto .coverView {
+  position: absolute;
+  display: flex;
+  width: 310px;
+  height: 320px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+#showPoto .coverView img {
+  width: 100%;
+  height: 100%;
+}
+#showPoto .saveDown {
+  position: relative;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  top: 180px;
+}
+.outerDiv {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 10;
+  right: -40px;
+  bottom: 25px;
+}
+.outerDiv .subOuterDiv {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #12142d;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.loader h1 {
+  height: fit-content;
+  width: fit-content;
+  color: #ff0000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-family: "Tesla", "Montserrat", sans-serif;
+  font-size: 38px;
+  text-align: center;
+}
+.loader span {
+  position: absolute;
+  margin: auto;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  width: fit-content;
+  color: white;
+}
+.loading-bar {
+  width: 2px;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  background: #f00;
+  transform: scaleY(0);
+}
+.loading-bar.bar1 {
+  left: 5%;
+  transform-origin: top left;
+}
+.loading-bar.bar2 {
+  right: 5%;
+  transform-origin: bottom right;
+}

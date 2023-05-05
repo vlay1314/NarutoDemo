@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.3092e1e0.css">
+    <!-- 引入 layui.css -->
+    <link href="//cdn.staticfile.org/layui/2.8.0-rc.16/css/layui.css" rel="stylesheet">
+    <!-- HTML Content -->
+    <!-- <script src="//cdn.staticfile.org/layui/2.8.0-rc.16/layui.js"></script> -->
+    <script src="/index.2d266dc5.js"></script>
+    <script src="/index.332569f3.js" charset="utf-8"></script>
+    <script src="/index.3b2addc6.js" charset="utf-8"></script>
+    
+    <script src="/index.246235aa.js" defer=""></script>
+    <title>人物控制移动</title>
+   
+</head>
+<body>
+
+    
+    <!-- 圆形旋转菜单 -->
+    <div id="outerDiv" class="outerDiv">
+        <div id="subOuterDiv" class="subOuterDiv">
+        </div>
+        <div id="m1" style="position: absolute"><img id="Air Attack 02" width="100%" height="100%" src="/biaoqing2.f37a1096.png"></div>
+        <div id="m2" style="position: absolute"><img id="Block" width="100%" height="100%" src="/quanji.6c2a9c13.png"></div>
+        <div id="m3" style="position: absolute"><img id="Dash" width="100%" height="100%" src="/quanji2.5962c675.png"></div>
+        <div id="m4" style="position: absolute"><img id="Die fall" width="100%" height="100%" src="/quanji3.222db73b.png"></div>
+        <div id="m5" style="position: absolute"><img id="Naruto pose" width="100%" height="100%" src="/quanji4.30c98d05.png"></div>
+        <div id="m6" style="position: absolute"><img id="Punch 01" width="100%" height="100%" src="/quanji5.f197abc6.png"></div>
+        <div id="m7" style="position: absolute"><img id="Rasengan Ready" width="100%" height="100%" src="/quanji6.539a64d0.png"></div>
+        <div id="m8" style="position: absolute"><img id="Kick 03" width="100%" height="100%" src="/good.28f60929.png"></div>
+    </div>
+
+    <!-- 添加游戏移动操作杆 -->
+    <!-- <div id="joystick" class="joystick">
+        <div class="bar-wrap">
+            <div class="bar"></div>
+        </div>
+    </div> -->
+   
+    <!-- 技能按钮 -->  
+    <div id="jump" class="skills">
+        <div class="attack bar"></div>
+    </div>
+    <!-- 相机拍照 -->
+    <div id="camera" class="camera">
+        <img src="/camera.008ff928.png" alt="" width="100%" height="100%">
+    </div>
+    <!-- 表情按钮 -->
+    <div id="biaoqing" class="biaoqing">
+        <img width="100%" height="100%" src="/biaoqing.7937995b.png" alt="">
+    </div>
+
+    <!-- 虚拟摇杆控件 -->
+    <div id="zone_joystick" class="nipple">
+        <div class="front"></div>
+        <!-- <div class="back"></div> -->
+    </div>
+
+    <div id="cameraDiv" class="cameraDiv">
+        
+        <div id="subCameraOne" class="subCameraOne">
+            <button type="button" class="layui-btn closeBtn" id="closeBtn">
+                <i class="layui-icon layui-icon-close" style="color: #fff; font-size: 50px"></i>
+            </button>
+        </div>
+        <canvas id="canvasDiv" width="100%" height="300" class="canvasDiv"></canvas>
+        <div id="subCameraTwo" class="subCameraTwo">
+            <div class="actionList">
+                <div class="action-item">
+                    <div id="item-one" class="grid-demo">
+                        <i class="layui-icon layui-icon-face-surprised" style="color: #fff; font-size: 30px"></i>
+                    </div>
+                    <div id="item-two" class="grid-demo">
+                        <i class="layui-icon layui-icon-heart" style="color: #fff; font-size: 30px"></i>
+                    </div>
+                    <div id="item-three" class="grid-demo">
+                        <i class="layui-icon layui-icon-face-smile" style="color: #fff; font-size: 30px"></i>
+                    </div>
+                    <div id="item-four" class="grid-demo">
+                        <i class="layui-icon layui-icon-face-cry" style="color: #fff; font-size: 30px"></i>
+                    </div>
+                    <div id="item-five" class="grid-demo">
+                        <i class="layui-icon layui-icon-moon" style="color: #fff; font-size: 30px"></i>
+                    </div>
+                    <div class="grid-demo"></div>
+                </div>
+                <div class="item-last"><span>动作</span></div>
+            </div>
+
+            <div class="icondot">
+                <i id="takePhoto" class="layui-icon layui-icon-circle-dot" style="color: #fff; font-size: 50px"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="bgShowPoto" data-html2canvas-ignore=""></div>
+    <div id="showPoto">
+        <div id="showImg">
+            <img id="bgImg" src="/codeImg.867aca04.jpg" alt="" width="300px" height="300px">
+            <div id="screenshotImg" class="screenshotImg">
+            </div>
+        </div>
+
+        <div class="coverView" id="coverView" lay-on="load" data-html2canvas-ignore=""></div>
+
+        <div class="saveDown">长按保存</div>
+    </div>
+
+     <div id="container" class="container"></div>
+    
+     <script src="/index.22d65e56.js"></script>
+
+     <!-- loading加载 -->
+     <div class="loader">
+        <h1>TESLA ROADSTER</h1>
+        <span>0% Loading...</span>
+        <div class="loading-bar bar1"></div>
+        <div class="loading-bar bar2"></div>
+    </div>
+
+    <script src="/index.4e992922.js"></script>
+</body>
+</html>

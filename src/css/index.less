@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@font-face {
+    font-family: Tesla;
+    src: url(../assets/fonts/TESLA.ttf) format("truetype");
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.container{
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nipple{
+    .front{
+        background: white;
+        opacity: 1.0 !important;
+    }
+    .back{
+        border: white  1.5px solid;
+        background-color: transparent !important;
+        opacity: 1.0 !important;
+    }
+}
+
+/*移动按钮的样式*/
+.joystick{
+    position: fixed;
+    left: 30px;
+    bottom: 60px;
+    width:120px;
+    height: 120px;
+    // background: #ccc;
+    border-radius: 50%;
+    // background: url("../images/joystick.png") center no-repeat;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    background-size: 100% 100%;
+
+    .bar-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        transform: translate(-50%, -50%);
+        .bar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            // background: url("../images/joystick-bar.png") center no-repeat;
+            background-size: 100% 100%;
+        }
+        .bar.active {
+            margin-top: -50px;
+        }
+    }
+}
+
+/*技能按键按钮样式*/
+.skills {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 20;
+    .bar:active {
+        transform: translateY(1px);
+    }
+
+    .attack {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 14px;
+        bottom: 80px;
+        background: url("../images/jump.png") center no-repeat;
+        background-size: 100% 100%;
+        border-radius: 50%;
+    }
+}
+
+.biaoqing{
+    position: fixed;
+    left: 80px;
+    bottom: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.camera{
+    position: fixed;
+    left: 40px;
+    bottom: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.cameraDiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    // top: calc(100% - 75%);
+    top: 0px;
+    background: rgba(0, 0, 0, 0);
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    .subCameraOne{
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.88);
+        flex: 2;
+        width: 100%;
+        height: auto;
+        .closeBtn{
+            position: relative;
+            top: 30px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+        }
+    }
+    .canvasDiv{
+        // style="display: flex;background-color: transparent; width: 100%;height: 300px; flex-grow: 0;"
+        display: flex;
+        background-color: transparent;
+        width: 100%;
+        height: 300px;
+        flex:1;
+    }
+     .subCameraTwo{
+        display: flex;
+        flex: 2;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.88);
+    
+        .actionList{
+            display: flex;
+            margin-top: 15px;
+            width: 100%;
+            .action-item{
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                width: 100%;
+                height: 100%;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-around;
+                .grid-demo{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            .item-last{
+                color: white;
+                background-color: rgba(0, 0, 0, 0.7);
+                text-align: center;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .icondot{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            margin-top: 30px;
+        }
+    }
+}
+
+#bgShowPoto{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 30;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#showPoto{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    // background: rgba(0, 0, 0, 0.9);
+    z-index: 31;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    #showImg{
+        position: absolute;
+        display: flex;
+        width: 310px;
+        height: 320px;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .screenshotImg{
+            position: absolute;
+            display: flex;
+            background-color: white;
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .coverView{
+        position: absolute;
+        display: flex;
+        width: 310px;
+        height: 320px;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .saveDown{
+        position: relative;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        display: flex;
+        top: 180px;
+    }
+}
+
+
+//圆盘菜单样式
+.outerDiv{
+    background-color: transparent;
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    position: fixed;
+    z-index: 10;
+    right: -40px;
+	bottom:25px;
+
+    .subOuterDiv {
+        background-color: transparent;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        // left: 100px;
+		// top: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    // img{
+    //     width: 100%;
+    //     height: 100%;
+    //     animation: throttle 1s step-end forwards;
+    // }
+
+    // img:active{
+    //     animation: none;
+    // }
+
+    // @keyframes throttle {
+    //     from {
+    //       pointer-events: none;
+    //     }
+    //     to {
+    //       pointer-events: all;
+    //     }
+    // }
+}
+
+
+.loader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(18, 20, 45);
+    top: 0;left: 0;
+    z-index: 9999;
+}
+
+.loader h1 {
+    height: fit-content;
+    width: fit-content;
+    color: rgb(255, 0, 0);
+    margin: auto;
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;margin:auto;
+    font-family: "Tesla", "Montserrat", sans-serif;
+    font-size: 38px;
+    text-align: center;
+}
+
+.loader span {
+    position: absolute;
+    margin: auto;
+    bottom: 15px;
+    left: 0;right: 0;
+    height: fit-content;
+    width: fit-content;
+    color: white;
+}
+
+.loading-bar {
+    width: 2px;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    background: #f00;
+    transform: scaleY(0);
+}
+
+.loading-bar.bar1 {
+    left: 5%;
+    transform-origin: top left;
+}
+.loading-bar.bar2 {
+    right: 5%;
+    transform-origin: bottom right;
+}
