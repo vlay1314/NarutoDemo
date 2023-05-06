@@ -6,6 +6,5 @@
 3.npm start 运行项目
 本项目使用parcel来打包的应用。具体可以查看parcel的官网
 
-下面这个是演示的视频
-\<br>
+下面这个是演示的视频<br>
 ![img](https://github.com/vlay1314/NarutoDemo/blob/main/demo.gif)
