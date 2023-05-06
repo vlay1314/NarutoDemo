@@ -7,4 +7,4 @@
 本项目使用parcel来打包的应用。具体可以查看parcel的官网
 
 下面这个是演示的视频
-https://github.com/vlay1314/NarutoDemo/
+https://github.com/vlay1314/NarutoDemo/chrome_OBVIlEXleb.mp4
